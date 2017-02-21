@@ -1,0 +1,5 @@
+Ok, so for adding pop ups to the code we will use
+https://developers.google.com/maps/documentation/javascript/infowindows
+The Infowindow will display the content that it gets from the API. Piece of cake.
+Here is a cool JSFiddle to demonstrate it: https://jsfiddle.net/api/post/library/pure/
+ 
