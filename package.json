@@ -1,0 +1,23 @@
+{
+  "name": "nocrime",
+  "version": "1.0.0",
+  "description": "Application that allows citizens to visualize and report crimes and uses such data to produce reports useful for authorities",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepdeev/nocrime.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deepdeev/nocrime/issues"
+  },
+  "homepage": "https://github.com/deepdeev/nocrime#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongodb": "^2.2.24"
+  }
+}
