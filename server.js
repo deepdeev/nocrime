@@ -26,14 +26,14 @@ res.sendFile(path.join(__dirname + '/public/app/views/index.html'));
 
 // Database connection
 
-MongoClient.connect(config.database, (err, database) => {
+MongoClient.connect(config.database, function(err, database) {
 
   if (err) return console.log(err)
   db = database;
 	console.log('me conecte bien a la base de datos de no crime');
   module.exports.database = db;
 
-  app.listen(config.port, () => {
+  app.listen(config.port, function(){
     console.log('listening on 1337')
   })
 });

@@ -1,79 +1,152 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-default">
+<head>
+  <meta charset="utf-8">
+
+  <title>NoCrime</title>
+
+  <!--<link rel="stylesheet" href="css/aos.css"/>-->
+  <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../../assets/css/ionicons.min.css">
+
+  <link href='//fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+  <link rel="stylesheet" href="../../assets/css/landingPageStyle.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body>
+<div class="skw-pages">
+  <div class="skw-page skw-page-1 active">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h1 class="skw-page__heading">NoCrime</h1>
+
+          <p class="skw-page__description">Duis eu venenatis enim, non molestie sem. Maecenas quis venenatis tellus. Mauris eros ipsum, consequat id diam nec, vulputate finibus ligula.</p>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-5">
+                <a class="btn-landingPage btn btn-lg btn-default">Denuncia</a>
+              </div>
+              <div class="col-md-1"></div>
+              <div class="col-md-5">
+                <a class="btn-landingPage btn btn-lg btn-default">Informate</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-2">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h1 class="skw-page__heading">NoCrime</h1>
+          <p class="skw-page__description">Duis eu venenatis enim, non molestie sem. Maecenas quis venenatis tellus. Mauris eros ipsum, consequat id diam nec, vulputate finibus ligula.</p>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-5">
+                <a class="btn-landingPage btn btn-lg btn-default">Denuncia</a>
+              </div>
+              <div class="col-md-1"></div>
+              <div class="col-md-5">
+                <a class="btn-landingPage btn btn-lg btn-default">Informate</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mapSection">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">CrimeScene</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">About us</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Change to satellite view</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Generate Screenshot</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Add crime</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Log Out</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Crime Scene!</h1>
-        <p>This is your welcome page to the places where crime has happened in Bogotá</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    <div class="row">
+      <div class="col-md-1">
       </div>
-      <div class="map-area">
-        <div id="map"></div>
+      <div class="col-md-10 principal" ng-app="firstApp" ng-controller="mainController as main">
+        <div class="row mapContainer">
+          <div class="col-md-8 map">
+            <div class="map-area">
+              <div id="map"></div>
+            </div>
+          </div>
+          <div class="col-md-4 mapPanel">
+            <h2 class="panelTitle">Filtros</h2>
+            <div class="panelField">
+              <div class="panelField-title">
+                <h3>Fecha</h3>
+              </div>
+              <div class="panelField-content">
+                <p>Duis eu venenatis enim, non molestie sem. Maecenas quis venenatis tellus. Mauris eros ipsum, consequat id diam nec, vulputate finibus ligula.</p>
+              </div>
+            </div>
+            <div class="panelField">
+              <div class="panelField-title">
+                <h3>Tipo</h3>
+              </div>
+              <div class="panelField-content">
+                <p>Duis eu venenatis enim, non molestie sem. Maecenas quis venenatis tellus. Mauris eros ipsum, consequat id diam nec, vulputate finibus ligula.</p>
+              </div>
+            </div>
+            <div class="panelField">
+              <div class="panelField-title">
+                <h3>Denunciado</h3>
+              </div>
+              <div class="panelField-content">
+                <p>Duis eu venenatis enim, non molestie sem. Maecenas quis venenatis tellus. Mauris eros ipsum, consequat id diam nec, vulputate finibus ligula.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
-
+      <div class="col-md-1">
+      </div>
     </div>
+  </div>
+
+</div> <!--Map Section-->
+
+<div class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="footer-title">NoCrime</h1>
+        <p class="footer-text">Duis eu venenatis enim, non molestie sem. Maecenas quis venenatis tellus. Mauris eros ipsum, consequat id diam nec, vulputate finibus ligula.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+<script src="../../assets/js/map.js"></script>
 
-    <script src="assets/js/map.js"></script>
-    </body>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUQ2DRYf1qPR-pee0oyseX0zbC0SoL0fk&callback=initMap"
-    async defer></script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-  </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUQ2DRYf1qPR-pee0oyseX0zbC0SoL0fk&callback=initMap" async defer></script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+
+<script src="../../assets/js/jquery.min.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+<script src="../../assets/js/aos.js"></script>
+
+<script src="../../assets/js/main.js"></script>
+
+</body>
 
 </html>

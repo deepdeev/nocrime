@@ -1,0 +1,81 @@
+body
+{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Landing page*/
+.btn-landingPage
+{
+    border-radius: 0px!important;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    /*color: #1abc9c;*/
+    width: 100px;
+    margin-bottom: 10px;
+}
+/*MapSection*/
+.principal
+{
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+.mapContainer
+{
+    height: 500px;
+}
+#map {
+    height: inherit;
+}
+
+.map-area {
+    height: 500px;
+    /*padding-bottom: 20px;*/
+}
+
+.mapPanel
+{
+    background: #292929;
+    height: 100%;
+}
+.panelTitle
+{
+    color:#fff;
+    border-bottom: 1px solid white;
+}
+.panelField
+{
+    font-size: 15px;
+}
+.panelField-title
+{
+    color: #1abc9c;
+}
+.panelField-content
+{
+    color: #A2A9AF;
+}
+.footer
+{
+    color: #A2A9AF;
+    text-align: center;
+    min-height: 200px;
+    padding-bottom:50px;
+    margin-top: 40px;
+    background: #292929;
+}
+.footer-title
+{
+    color: #fff;
+    /*text-transform: uppercase;*/
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-size: 400%;
+}
+.footer-text
+{
+    max-width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 23%;
+    padding-bottom: 20px;
+}

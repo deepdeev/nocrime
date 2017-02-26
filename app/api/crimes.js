@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
 });
 
 router.post('/',  function(req, res){
-  db.collection('crimes').save(user, (save_error, save_result) =>{
+  db.collection('crimes').save(user, function(save_error, save_result){
     if(save_error) return 'Error while saving crime into the database'
     res.send('Crime saved')
   });
