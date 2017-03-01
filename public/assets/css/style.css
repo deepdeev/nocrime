@@ -53,6 +53,18 @@ body
 {
     color: #A2A9AF;
 }
+.dateSelector
+{
+    margin-left: 15px;
+    font-size: 15px;
+    padding-left: 4px;
+    padding-right: 4px;
+
+}
+.flatpickr-calendar
+{
+
+}
 .footer
 {
     color: #A2A9AF;

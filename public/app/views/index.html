@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="../../assets/css/landingPageStyle.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
 
+  <link rel="stylesheet" href="../../assets/css/flatpickr.min.css">
+
 </head>
 <body>
 <div class="skw-pages">
@@ -35,7 +37,7 @@
               </div>
               <div class="col-md-1"></div>
               <div class="col-md-5">
-                <a class="btn-landingPage btn btn-lg btn-default">Informate</a>
+                <a class="btn-landingPage btn btn-lg btn-default" href="#mapSection">Informate</a>
               </div>
             </div>
 
@@ -74,12 +76,12 @@
 
 </div>
 
-<div class="mapSection">
+<div class="mapSection" id="mapSection">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-1">
       </div>
-      <div class="col-md-10 principal" ng-app="firstApp" ng-controller="mainController as main">
+      <div class="col-md-10 principal">
         <div class="row mapContainer">
           <div class="col-md-8 map">
             <div class="map-area">
@@ -93,7 +95,10 @@
                 <h3>Fecha</h3>
               </div>
               <div class="panelField-content">
-                <p>Duis eu venenatis enim, non molestie sem. Maecenas quis venenatis tellus. Mauris eros ipsum, consequat id diam nec, vulputate finibus ligula.</p>
+                <div class="row">
+                  <input class="flatpickr col-md-3 dateSelector" type="text" placeholder="Fecha inicial">
+                  <input class="flatpickr col-md-3 dateSelector" type="text" placeholder="Fecha final">
+                </div>
               </div>
             </div>
             <div class="panelField">
@@ -101,15 +106,43 @@
                 <h3>Tipo</h3>
               </div>
               <div class="panelField-content">
-                <p>Duis eu venenatis enim, non molestie sem. Maecenas quis venenatis tellus. Mauris eros ipsum, consequat id diam nec, vulputate finibus ligula.</p>
+                <form>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">Tipo 1
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">Tipo 2
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">Tipo 3
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">Tipo 4
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">Tipo 5
+                  </label>
+
+                  </label>
+                </form>
               </div>
             </div>
             <div class="panelField">
               <div class="panelField-title">
-                <h3>Denunciado</h3>
+                <h3>Ubicación</h3>
               </div>
               <div class="panelField-content">
-                <p>Duis eu venenatis enim, non molestie sem. Maecenas quis venenatis tellus. Mauris eros ipsum, consequat id diam nec, vulputate finibus ligula.</p>
+                <p>Seleccione una Ciudad:</p>
+                <form>
+                  <div class="form-group">
+                    <select class="form-control" id="sel1">
+                      <option>Bogotá</option>
+                      <option>Cali</option>
+                      <option>Duitama</option>
+                      <option>Cartagena</option>
+                    </select>
+                  </div>
+                </form>
               </div>
             </div>
 
@@ -144,8 +177,12 @@
 <script src="../../assets/js/jquery.min.js"></script>
 <script src="../../assets/js/bootstrap.js"></script>
 <script src="../../assets/js/aos.js"></script>
+<!--Selector de Fechas-->
+<script src="../../assets/js/flatpickr.min.js"></script>
 
 <script src="../../assets/js/main.js"></script>
+
+
 
 </body>
 
