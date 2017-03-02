@@ -52,3 +52,4 @@ $(document).ready(function() {
 });
 //Selector de Fechas
 flatpickr(".flatpickr");
+

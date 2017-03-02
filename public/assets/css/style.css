@@ -16,7 +16,7 @@ body
 .principal
 {
     margin-bottom: 5%;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 .mapContainer
 {
@@ -25,6 +25,7 @@ body
 #map {
     height: inherit;
 }
+
 
 .map-area {
     height: 500px;
@@ -40,6 +41,7 @@ body
 {
     color:#fff;
     border-bottom: 1px solid white;
+    margin-top: 15px;
 }
 .panelField
 {
@@ -48,6 +50,11 @@ body
 .panelField-title
 {
     color: #1abc9c;
+}
+h3
+{
+    margin-top: 8px!important;
+    margin-bottom: 5px;
 }
 .panelField-content
 {
@@ -61,9 +68,20 @@ body
     padding-right: 4px;
 
 }
+.list
+{
+    height: 25px;
+    border-radius: 0px;
+    border: 0px;
+    padding: 0px;
+}
 .flatpickr-calendar
 {
 
+}
+.aceptarCancelar
+{
+    margin-top: 20px;
 }
 .footer
 {

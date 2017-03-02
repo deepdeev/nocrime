@@ -6,15 +6,15 @@
   <title>NoCrime</title>
 
   <!--<link rel="stylesheet" href="css/aos.css"/>-->
-  <link rel="stylesheet" href="../../assets/css/bootstrap.css">
   <link rel="stylesheet" href="../../assets/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../assets/css/bootstrap.css">
 
   <link href='//fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
   <link rel="stylesheet" href="../../assets/css/landingPageStyle.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
 
   <link rel="stylesheet" href="../../assets/css/flatpickr.min.css">
 
+  <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
 <div class="skw-pages">
@@ -81,6 +81,7 @@
     <div class="row">
       <div class="col-md-1">
       </div>
+
       <div class="col-md-10 principal">
         <div class="row mapContainer">
           <div class="col-md-8 map">
@@ -88,7 +89,93 @@
               <div id="map"></div>
             </div>
           </div>
-          <div class="col-md-4 mapPanel">
+          <!--
+          <div id="panelCrear" class="col-md-4 mapPanel">
+            <h2 class="panelTitle">Reporta un Crimen</h2>
+            <div class="row">
+                <div class="panelField col-md-6">
+                  <div class="panelField-title">
+                    <h3>Fecha</h3>
+                  </div>
+                  <div class="panelField-content">
+                  <p>Cuando sucedio?</p>
+                    <div class="row">
+                      <input class="flatpickr dateSelector" type="text" placeholder="Seleciona...">
+                    </div>
+                  </div>
+                </div>
+                <div class="panelField col-md-6">
+                  <div class="panelField-title">
+                    <h3>Tipo</h3>
+                  </div>
+                  <div class="panelField-content">
+                  <p>Que tipo de crimen fue?</p>
+                     <form>
+                      <div class="form-group">
+                        <select class="list form-control" id="sel1">
+                          <option>Tipo 1</option>
+                          <option>Tipo 2</option>
+                          <option>Tipo 3</option>
+                          <option>Tipo 4</option>
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+            <div class="panelField">
+              <div class="panelField-title">
+                <h3>Denunciado</h3>
+              </div>
+              <div class="panelField-content">
+                <p>Ya has denunciado ante autoridades competentes?</p>
+                  <div class="row">
+                      <div class="col-md-4"></div>
+                <form class="col-md-6">
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">Sí
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">No
+                  </label>
+                </form>
+                      <div class="col-md-2"></div>
+                  </div>
+              </div>
+            </div>
+            <div class="panelField">
+              <div class="panelField-title">
+                <h3>Ubicación</h3>
+              </div>
+              <div class="panelField-content">
+                <p>Selecciona una ubicación haciendo click en el mapa.</p>
+              </div>
+            </div>
+              <div class="panelField">
+                  <div class="panelField-title">
+                      <h3>Descripción</h3>
+                  </div>
+                  <div class="panelField-content">
+                      <p>Cuentanos que sucedio haciendo click aqui.</p>
+                  </div>
+              </div>
+            <div class="panelField aceptarCancelar">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-3">
+                        <a class="btn-landingPage btn btn-lg btn-default">Aceptar</a>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <a class="btn-landingPage btn btn-lg btn-default" href="#mapSection">Cancelar</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>--> <!--Termina panel-->
+
+          <div id="panelFiltros" class="col-md-4 mapPanel">
             <h2 class="panelTitle">Filtros</h2>
             <div class="panelField">
               <div class="panelField-title">
@@ -122,8 +209,6 @@
                   <label class="checkbox-inline">
                     <input type="checkbox" value="">Tipo 5
                   </label>
-
-                  </label>
                 </form>
               </div>
             </div>
@@ -148,7 +233,8 @@
 
           </div>
         </div>
-      </div>
+      </div><!-- Termina Panel -->
+
       <div class="col-md-1">
       </div>
     </div>

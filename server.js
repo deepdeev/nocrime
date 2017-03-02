@@ -1,6 +1,8 @@
 // load necessary modules
 var express = require('express');
 var app = express();
+var cors = require('cors')
+
 var path = require('path');
 var MongoClient = require('mongodb').MongoClient;
 var db;
@@ -10,7 +12,7 @@ var config = require('./config');
 
 // set the public folder to serve public assets
 app.use(express.static(__dirname + '/public'));
-
+app.use(cors());
 // api
 
 // API routes
@@ -18,7 +20,7 @@ var apiRoutes= require('./app/api');
 app.use('/api', apiRoutes);
 
 
-// send our index.html file to the user for the home page
+
 app.get('/', function(req, res) {
 res.sendFile(path.join(__dirname + '/public/app/views/index.html'));
 });
