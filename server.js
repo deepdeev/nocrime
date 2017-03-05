@@ -4,11 +4,17 @@ var app = express();
 var cors = require('cors')
 
 var path = require('path');
+var bodyParser = require('body-parser');
+
 var MongoClient = require('mongodb').MongoClient;
 var db;
 
 // app CONFIGURATION
 var config = require('./config');
+
+// use body parser so we can grab information from POST requests
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // set the public folder to serve public assets
 app.use(express.static(__dirname + '/public'));

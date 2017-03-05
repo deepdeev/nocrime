@@ -9,8 +9,10 @@ var db;
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
+    console.log("body  in use is: " + req.body);
   db = server.database; // got the database from server.js
   next();
+  console.log('passes middleware');
 });
 
 
@@ -23,10 +25,12 @@ router.get('/', function(req, res) {
 });
 
 router.post('/',  function(req, res){
-  db.collection('crimes').save(user, function(save_error, save_result){
+  var crime = req.body;
+  db.collection('crimes').save(crime, (save_error, save_result) => {
     if(save_error) return 'Error while saving crime into the database'
     res.send('Crime saved')
   });
+
 });
 
 module.exports = router;
