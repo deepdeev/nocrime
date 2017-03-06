@@ -9,7 +9,6 @@ var db;
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
-    console.log("body  in use is: " + req.body);
   db = server.database; // got the database from server.js
   next();
   console.log('passes middleware');
@@ -17,19 +16,56 @@ router.use(function timeLog(req, res, next) {
 
 
 router.get('/', function(req, res) {
-    db.collection('crimes').find().toArray(function(err, result){
-    if(err) return 'Error in database'
-    res.send(result);
-    });
+    if(Object.getOwnPropertyNames(req.body).length > 0){ // only enters here when body is empty
+      var startDate = new Date(req.body.startDate);
+      var endDate = new Date(req.body.endDate);
+      filters = req.body.selectedCrimes;
+
+      console.log(req.body);
+      res.send("reached alternative!");
+    }
+    else {
+      db.collection('crimes').find().toArray(function(err, result){
+      if(err) return 'Error in database'
+      res.send(result);
+      });
+    }
+
 
 });
 
+
+
 router.post('/',  function(req, res){
   var crime = req.body;
+  crime.date = new Date(crime.date); // so it is saved not asa string but as a Date object
   db.collection('crimes').save(crime, (save_error, save_result) => {
     if(save_error) return 'Error while saving crime into the database'
     res.send('Crime saved')
   });
+
+});
+
+router.post('/search', function (req, res){
+  var search = req.body;
+  if(Object.getOwnPropertyNames(search).length < 3){
+    res.send('You did not provide enough arguments to make a search');
+  } else {
+    var startDate = new Date(req.body.startDate);
+    var endDate = new Date(req.body.endDate);
+    var selectedCrimes = req.body.selectedCrimes;
+
+    db.collection('crimes').find(
+      { date: { $gte: startDate, $lte: endDate },
+        type: {$in: selectedCrimes}
+      }
+    ).toArray(function(err, result) {
+      if(err) return 'Error in database'
+      res.send(result);
+    })
+  }
+
+
 
 });
 
