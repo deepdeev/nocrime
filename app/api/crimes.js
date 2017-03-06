@@ -16,21 +16,10 @@ router.use(function timeLog(req, res, next) {
 
 
 router.get('/', function(req, res) {
-    if(Object.getOwnPropertyNames(req.body).length > 0){ // only enters here when body is empty
-      var startDate = new Date(req.body.startDate);
-      var endDate = new Date(req.body.endDate);
-      filters = req.body.selectedCrimes;
-
-      console.log(req.body);
-      res.send("reached alternative!");
-    }
-    else {
       db.collection('crimes').find().toArray(function(err, result){
       if(err) return 'Error in database'
       res.send(result);
       });
-    }
-
 
 });
 
