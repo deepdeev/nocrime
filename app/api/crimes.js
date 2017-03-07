@@ -37,6 +37,8 @@ router.post('/',  function(req, res){
 
 router.post('/search', function (req, res){
   var search = req.body;
+  --console.log(search);
+
   if(Object.getOwnPropertyNames(search).length < 3){
     res.send('You did not provide enough arguments to make a search');
   } else {
@@ -46,10 +48,12 @@ router.post('/search', function (req, res){
 
     db.collection('crimes').find(
       { date: { $gte: startDate, $lte: endDate },
-        type: {$in: selectedCrimes}
+        type: {$in: selectedCrimes }
       }
     ).toArray(function(err, result) {
-      if(err) return 'Error in database'
+      if(err) return 'Error in database';
+      console.log("--------result--------")
+      console.log(result);
       res.send(result);
     })
   }
