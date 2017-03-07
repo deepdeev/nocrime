@@ -34,10 +34,25 @@ router.post('/',  function(req, res){
   });
 
 });
+router.post('/many',  function(req, res){
+  var crimes = [];
+  crimes=req.body.crimes;
+  console.log(crimes);
+  crimes.forEach((crime,index)=>{crime.date = new Date(crime.date);db.collection('crimes').save(crime, (save_error, save_result) => {
+if(index==crimes.length-1)
+{
+  if(save_error) return 'Error while saving crimes into the database';
+  res.send('Crimes saved');
+
+}
+
+  })});
+
+});
 
 router.post('/search', function (req, res){
   var search = req.body;
-  --console.log(search);
+  console.log(search);
 
   if(Object.getOwnPropertyNames(search).length < 3){
     res.send('You did not provide enough arguments to make a search');
