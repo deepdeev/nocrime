@@ -37,7 +37,7 @@ router.post('/',  function(req, res){
 
 router.post('/search', function (req, res){
   var search = req.body;
-  --console.log(search);
+  console.log(search);
 
   if(Object.getOwnPropertyNames(search).length < 3){
     res.send('You did not provide enough arguments to make a search');
