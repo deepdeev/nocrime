@@ -10,7 +10,8 @@ var MongoClient = require('mongodb').MongoClient;
 var db;
 
 // app CONFIGURATION
-var config = require('./config');
+var config = require('./config');//no supe como generar el config :( Sería bueno poner en el readme.md instrucciones de como hacerlo
+								// (si, hice npm install --save)
 
 // use body parser so we can grab information from POST requests
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -42,6 +43,7 @@ MongoClient.connect(config.database, function(err, database) {
   module.exports.database = db;
 
   app.listen(config.port, function(){
-    console.log('listening on 1337')
+    console.log('listening on 1337') //punto y coma
   })
 });
+//En general bien
