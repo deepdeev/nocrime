@@ -14,3 +14,5 @@ apiRouter.get('/', function(req, res) {
 // set subroutes on the other files
 apiRouter.use('/crimes', require('./crimes'));
 module.exports = apiRouter;
+
+//Bien, bueno que este ordenado con diferentes js, pues permite facil modificabilidad
