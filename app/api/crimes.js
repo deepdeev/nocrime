@@ -4,6 +4,12 @@ var path = require('path');
 
 
 // I need an instance of db in this file, so I can call it when I need to add something
+// ngomez22
+// No me parece correcto importar todo el servidor aquí solo para obtener
+// la base de datos.
+// Tal vez podrían crear un módulo aparte para funciones de la base de datos,
+// como retornar la conexión.
+
 var server = require('../../server');
 var db;
 
@@ -50,6 +56,8 @@ if(index==crimes.length-1)
 
 });
 
+// ngomez22
+// Tal vez este método podría ser un GET ?
 router.post('/search', function (req, res){
   var search = req.body;
   console.log(search);

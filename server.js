@@ -39,6 +39,11 @@ MongoClient.connect(config.database, function(err, database) {
   if (err) return console.log(err)
   db = database;
 	console.log('me conecte bien a la base de datos de no crime');
+  // ngomez
+  // No estoy seguro qué tan correcto sea exportar la conexión a la base de
+  // datos ya que cuando se usa MongoClient por lo que he visto la conexión
+  // siempre se cierra lo más rápido posible. Podrían considerar mongoose para
+  // facilitar esto.
   module.exports.database = db;
 
   app.listen(config.port, function(){
